@@ -1,7 +1,7 @@
 
 # Get Near Earth Objects From Nasa API
 
-This project created getting near earth asteroid information 
+This project is created for getting near earth asteroid information 
 between given start and end time
 sorted by closest approach distance to Earth 
 using [NASA NeoWs Web Service](https://api.nasa.gov/).
