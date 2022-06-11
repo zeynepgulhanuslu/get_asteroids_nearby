@@ -1,0 +1,43 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "This is sample server for getting Near Earth Asteroid Objects within specified time using NASA web service.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Zeynep Gulhan Uslu",
+      "email": "zeynepgulhanuslu@gmail.com"
+    }
+  },
+  "paths": {
+    "/get_near_earth_objects": {
+      "description": "Get Near Earth Objects from NASA Service NEOWS",
+      "post": {
+        "description": "Get Near Earth Objects",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "start_date": {
+                    "type": "string",
+                    "example": "2022-06-11"
+                  },
+                  "end_date": {
+                    "type": "string",
+                    "example": "2022-06-15"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully get near earth objects sorted by distance."
+          }
+        }
+      }
+    }
+  }
+}

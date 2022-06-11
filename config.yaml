@@ -1,0 +1,21 @@
+# NASA API RELATED VARIABLES
+URL: 'https://api.nasa.gov/neo/rest/v1/feed?'
+API_KEY: 'kzRDhp5iVjkgRLPGbkEz19e3DbyiHOxby5n7I8np'
+ESTIMATED_SIZE_TYPE: 'kilometers'             # estimated size types: kilometers, meters, miles, feet
+SIZE_COMPARE_VAL: 'estimated_diameter_min'    # compare value can be : estimated_diameter_max, estimated_diameter_min
+
+# GET NEAR OBJECTS REST API RELATED VARIABLES
+
+HOST: '127.0.0.1'
+PORT: 8000
+DEFAULT_START_DATE: '2022-06-09'
+DEFAULT_END_DATE: '2022-06-10'
+
+
+# CONSTANT ERROR MESSAGES
+
+DATE_FORMAT_MESSAGE: 'Date format should be in YYYY-MM-DD, YYYY/MM/DD, YYYY MM DD format.'
+NASA_SERVER_NOT_RESPOND: 'Nasa server response not found.'
+NEAR_OBJECTS_NOT_EXIST: 'Near earth objects are not found for this request.'
+NEAR_OBJECTS_EMPTY: 'Near earth objects are empty.'
+NASA_SERVER_SUCCESS: 'Successfully found near earth objects from NASA server.'
