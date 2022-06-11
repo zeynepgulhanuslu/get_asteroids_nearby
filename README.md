@@ -1,16 +1,9 @@
 
 # Get Near Earth Objects From Nasa API
+This project is to display information of the asteroids that are close to earth between a certain time period sorted 
+by proximity to the Earth using [NASA NeoWs Web Service](https://api.nasa.gov/).
 
-This project is created for getting near earth asteroid information 
-between given start and end time
-sorted by closest approach distance to Earth 
-using [NASA NeoWs Web Service](https://api.nasa.gov/).
-
-It is written as a REST API using FastApi.
-
-
-
-
+It is written as REST API using FastApi.
 
 
 
