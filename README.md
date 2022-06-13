@@ -60,7 +60,7 @@ You can change host or port values as your wish.
 ```
 # CONSTANT ERROR MESSAGES
 
-DATE_FORMAT_MESSAGE: 'Date format should be in YYYY-MM-DD, YYYY/MM/DD, YYYY MM DD format.'
+DATE_FORMAT_MESSAGE: 'Date format should be in YYYY-MM-DD format.'
 NASA_SERVER_NOT_RESPOND: 'Nasa server response not found.'
 NEAR_OBJECTS_NOT_EXIST: 'Near earth objects are not found for this request.'
 NEAR_OBJECTS_EMPTY: 'Near earth objects are empty.'
