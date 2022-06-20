@@ -43,7 +43,7 @@ def index():
 
 
 @app.post("/get_near_earth_objects/")
-async def get_near_earth_objects(item: NeoWsItem):
+def get_near_earth_objects(item: NeoWsItem):
     is_dates_correct, msg = check_dates_format(item.start_date, item.end_date)
     if not is_dates_correct:
         return {'result': msg}
@@ -60,7 +60,6 @@ async def get_near_earth_objects(item: NeoWsItem):
         if not response_not_empty:
             return {'result': response_msg}
         else:
-
             response = response_json['near_earth_objects']
             near_earth_object_list = []
 
@@ -68,9 +67,11 @@ async def get_near_earth_objects(item: NeoWsItem):
                 near_earth_object_list.extend([get_near_earth_object_from_dict(x) for x in objects])
 
             near_earth_object_list.sort(key=lambda x: x.estimated_size[
-                config['ESTIMATED_SIZE_TYPE']]
-            [config['SIZE_COMPARE_VAL']])
+                config['ESTIMATED_SIZE_TYPE']][config['SIZE_COMPARE_VAL']])
+            logging.warning('Successfully returns near earth objects')
+
             return {'NearEarthObjectList': near_earth_object_list}
+
     except Exception as err:
         logging.error({'error_message': err})
         return {'result': err}
